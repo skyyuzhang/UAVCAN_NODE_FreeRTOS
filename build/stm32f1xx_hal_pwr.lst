@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccTaJlj3.s 			page 1
+ARM GAS  /tmp/ccBR9f2p.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
   32:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
   33:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
   34:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-ARM GAS  /tmp/ccTaJlj3.s 			page 2
+ARM GAS  /tmp/ccBR9f2p.s 			page 2
 
 
   35:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
   89:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   * @{
   90:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   */  
   91:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c **** /* --- CR Register ---*/
-ARM GAS  /tmp/ccTaJlj3.s 			page 3
+ARM GAS  /tmp/ccBR9f2p.s 			page 3
 
 
   92:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c **** /* Alias word address of LPSDSR bit */
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  136:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   __asm volatile( "nop" );
   35              		.loc 1 136 0
   36              	@ 136 "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" 1
-ARM GAS  /tmp/ccTaJlj3.s 			page 4
+ARM GAS  /tmp/ccBR9f2p.s 			page 4
 
 
   37 0002 00BF     		nop
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
   56              		.cfi_startproc
   57              		@ args = 0, pretend = 0, frame = 0
   58              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccTaJlj3.s 			page 5
+ARM GAS  /tmp/ccBR9f2p.s 			page 5
 
 
   59              		@ link register save eliminated.
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  100 0008 20000E42 		.word	1108213792
  101              		.cfi_endproc
  102              	.LFE66:
-ARM GAS  /tmp/ccTaJlj3.s 			page 6
+ARM GAS  /tmp/ccBR9f2p.s 			page 6
 
 
  104              		.section	.text.HAL_PWR_DisableBkUpAccess,"ax",%progbits
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  209:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   * @brief    Low Power modes configuration functions
  210:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   *
  211:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c **** @verbatim
-ARM GAS  /tmp/ccTaJlj3.s 			page 7
+ARM GAS  /tmp/ccBR9f2p.s 			page 7
 
 
  212:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****  ===============================================================================
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  266:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****     [..]
  267:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****       The Stop mode is based on the Cortex-M3 deepsleep mode combined with peripheral
  268:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****       clock gating. The voltage regulator can be configured either in normal or low-power mode.
-ARM GAS  /tmp/ccTaJlj3.s 			page 8
+ARM GAS  /tmp/ccBR9f2p.s 			page 8
 
 
  269:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****       In Stop mode, all clocks in the 1.8 V domain are stopped, the PLL, the HSI and the HSE RC 
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  323:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c **** /**
  324:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   * @brief  Configures the voltage threshold detected by the Power Voltage Detector(PVD).
  325:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   * @param  sConfigPVD: pointer to an PWR_PVDTypeDef structure that contains the configuration
-ARM GAS  /tmp/ccTaJlj3.s 			page 9
+ARM GAS  /tmp/ccBR9f2p.s 			page 9
 
 
  326:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   *         information for the PVD.
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  172 0030 4368     		ldr	r3, [r0, #4]
  173 0032 13F4803F 		tst	r3, #65536
  174 0036 04D0     		beq	.L12
-ARM GAS  /tmp/ccTaJlj3.s 			page 10
+ARM GAS  /tmp/ccBR9f2p.s 			page 10
 
 
  349:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   {
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  210              	.L11:
  211 0078 7047     		bx	lr
  212              	.L17:
-ARM GAS  /tmp/ccTaJlj3.s 			page 11
+ARM GAS  /tmp/ccBR9f2p.s 			page 11
 
 
  213 007a 00BF     		.align	2
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  382:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   * @brief  Disables the Power Voltage Detector(PVD).
  383:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   * @retval None
  384:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   */
-ARM GAS  /tmp/ccTaJlj3.s 			page 12
+ARM GAS  /tmp/ccBR9f2p.s 			page 12
 
 
  385:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c **** void HAL_PWR_DisablePVD(void)
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
    6:Drivers/CMSIS/Include/cmsis_gcc.h ****  ******************************************************************************/
    7:Drivers/CMSIS/Include/cmsis_gcc.h **** /* Copyright (c) 2009 - 2015 ARM LIMITED
    8:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/ccTaJlj3.s 			page 13
+ARM GAS  /tmp/ccBR9f2p.s 			page 13
 
 
    9:Drivers/CMSIS/Include/cmsis_gcc.h ****    All rights reserved.
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
   63:Drivers/CMSIS/Include/cmsis_gcc.h **** 
   64:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
   65:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Disable IRQ Interrupts
-ARM GAS  /tmp/ccTaJlj3.s 			page 14
+ARM GAS  /tmp/ccBR9f2p.s 			page 14
 
 
   66:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Disables IRQ interrupts by setting the I-bit in the CPSR.
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  120:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  121:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
  122:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/ccTaJlj3.s 			page 15
+ARM GAS  /tmp/ccBR9f2p.s 			page 15
 
 
  123:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, apsr" : "=r" (result) );
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  177:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, msp\n" : "=r" (result) );
  178:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
  179:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  /tmp/ccTaJlj3.s 			page 16
+ARM GAS  /tmp/ccBR9f2p.s 			page 16
 
 
  180:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  234:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Disables FIQ interrupts by setting the F-bit in the CPSR.
  235:Drivers/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
  236:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
-ARM GAS  /tmp/ccTaJlj3.s 			page 17
+ARM GAS  /tmp/ccBR9f2p.s 			page 17
 
 
  237:Drivers/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __disable_fault_irq(void)
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  291:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  292:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  293:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/ccTaJlj3.s 			page 18
+ARM GAS  /tmp/ccBR9f2p.s 			page 18
 
 
  294:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  348:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  349:Drivers/CMSIS/Include/cmsis_gcc.h **** /*@} end of CMSIS_Core_RegAccFunctions */
  350:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/ccTaJlj3.s 			page 19
+ARM GAS  /tmp/ccBR9f2p.s 			page 19
 
 
  351:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  405:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  406:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("sev");
  407:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  /tmp/ccTaJlj3.s 			page 20
+ARM GAS  /tmp/ccBR9f2p.s 			page 20
 
 
  408:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  462:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  463:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  464:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Reverse byte order (16 bit)
-ARM GAS  /tmp/ccTaJlj3.s 			page 21
+ARM GAS  /tmp/ccBR9f2p.s 			page 21
 
 
  465:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Reverses the byte order in two unsigned short values.
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  519:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  520:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  521:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Reverse bit order of value
-ARM GAS  /tmp/ccTaJlj3.s 			page 22
+ARM GAS  /tmp/ccBR9f2p.s 			page 22
 
 
  522:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Reverses the bit order of the given value.
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  411:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   * @retval None
  412:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   */
  413:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c **** void HAL_PWR_DisableWakeUpPin(uint32_t WakeUpPinx)
-ARM GAS  /tmp/ccTaJlj3.s 			page 23
+ARM GAS  /tmp/ccBR9f2p.s 			page 23
 
 
  414:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c **** {
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  427:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   *           the interrupt wake up source.
  428:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   *           This parameter can be one of the following values:
  429:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   *            @arg PWR_SLEEPENTRY_WFI: enter SLEEP mode with WFI instruction
-ARM GAS  /tmp/ccTaJlj3.s 			page 24
+ARM GAS  /tmp/ccBR9f2p.s 			page 24
 
 
  430:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   *            @arg PWR_SLEEPENTRY_WFE: enter SLEEP mode with WFE instruction
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  406              	.LBE26:
  407              	.LBB28:
  408              	.LBB29:
-ARM GAS  /tmp/ccTaJlj3.s 			page 25
+ARM GAS  /tmp/ccBR9f2p.s 			page 25
 
 
  409              		.syntax unified
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  463:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   * @note  When exiting Stop mode by using an interrupt or a wakeup event,
  464:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   *        HSI RC oscillator is selected as system clock.
  465:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   * @note  When the voltage regulator operates in low power mode, an additional
-ARM GAS  /tmp/ccTaJlj3.s 			page 26
+ARM GAS  /tmp/ccBR9f2p.s 			page 26
 
 
  466:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   *         startup delay is incurred when waking up from Stop mode. 
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  494:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   /* Select Stop mode entry --------------------------------------------------*/
  495:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   if(STOPEntry == PWR_STOPENTRY_WFI)
  474              		.loc 1 495 0
-ARM GAS  /tmp/ccTaJlj3.s 			page 27
+ARM GAS  /tmp/ccBR9f2p.s 			page 27
 
 
  475 0020 0129     		cmp	r1, #1
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  514 003e 00BF     		.align	2
  515              	.L41:
  516 0040 00700040 		.word	1073770496
-ARM GAS  /tmp/ccTaJlj3.s 			page 28
+ARM GAS  /tmp/ccBR9f2p.s 			page 28
 
 
  517 0044 00ED00E0 		.word	-536810240
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  555              		.thumb
  556              		.syntax unified
  557 0016 7047     		bx	lr
-ARM GAS  /tmp/ccTaJlj3.s 			page 29
+ARM GAS  /tmp/ccBR9f2p.s 			page 29
 
 
  558              	.L45:
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  592 000c 00ED00E0 		.word	-536810240
  593              		.cfi_endproc
  594              	.LFE76:
-ARM GAS  /tmp/ccTaJlj3.s 			page 30
+ARM GAS  /tmp/ccBR9f2p.s 			page 30
 
 
  596              		.section	.text.HAL_PWR_DisableSleepOnExit,"ax",%progbits
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  567:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   *       WFE to wake up when an interrupt moves from inactive to pended.
  568:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   * @retval None
  569:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   */
-ARM GAS  /tmp/ccTaJlj3.s 			page 31
+ARM GAS  /tmp/ccBR9f2p.s 			page 31
 
 
  570:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c **** void HAL_PWR_EnableSEVOnPend(void)
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  673              	.L57:
  674              		.align	2
  675              	.L56:
-ARM GAS  /tmp/ccTaJlj3.s 			page 32
+ARM GAS  /tmp/ccBR9f2p.s 			page 32
 
 
  676 000c 00ED00E0 		.word	-536810240
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  705              		.fpu softvfp
  707              	HAL_PWR_PVD_IRQHandler:
  708              	.LFB80:
-ARM GAS  /tmp/ccTaJlj3.s 			page 33
+ARM GAS  /tmp/ccBR9f2p.s 			page 33
 
 
  597:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c ****   /* Check PWR exti flag */
@@ -1973,66 +1973,66 @@ ARM GAS  /tmp/ccTaJlj3.s 			page 1
  753              		.file 11 "/usr/bin/gcc-arm-none-eabi-6-2017-q2-update/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h
  754              		.file 12 "/usr/bin/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/sys/reent.h"
  755              		.file 13 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h"
-ARM GAS  /tmp/ccTaJlj3.s 			page 34
+ARM GAS  /tmp/ccBR9f2p.s 			page 34
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f1xx_hal_pwr.c
-     /tmp/ccTaJlj3.s:16     .text.PWR_OverloadWfe:0000000000000000 $t
-     /tmp/ccTaJlj3.s:22     .text.PWR_OverloadWfe:0000000000000000 PWR_OverloadWfe
-     /tmp/ccTaJlj3.s:46     .text.HAL_PWR_DeInit:0000000000000000 $t
-     /tmp/ccTaJlj3.s:53     .text.HAL_PWR_DeInit:0000000000000000 HAL_PWR_DeInit
-     /tmp/ccTaJlj3.s:73     .text.HAL_PWR_DeInit:0000000000000014 $d
-     /tmp/ccTaJlj3.s:78     .text.HAL_PWR_EnableBkUpAccess:0000000000000000 $t
-     /tmp/ccTaJlj3.s:85     .text.HAL_PWR_EnableBkUpAccess:0000000000000000 HAL_PWR_EnableBkUpAccess
-     /tmp/ccTaJlj3.s:100    .text.HAL_PWR_EnableBkUpAccess:0000000000000008 $d
-     /tmp/ccTaJlj3.s:105    .text.HAL_PWR_DisableBkUpAccess:0000000000000000 $t
-     /tmp/ccTaJlj3.s:112    .text.HAL_PWR_DisableBkUpAccess:0000000000000000 HAL_PWR_DisableBkUpAccess
-     /tmp/ccTaJlj3.s:127    .text.HAL_PWR_DisableBkUpAccess:0000000000000008 $d
-     /tmp/ccTaJlj3.s:132    .text.HAL_PWR_ConfigPVD:0000000000000000 $t
-     /tmp/ccTaJlj3.s:139    .text.HAL_PWR_ConfigPVD:0000000000000000 HAL_PWR_ConfigPVD
-     /tmp/ccTaJlj3.s:215    .text.HAL_PWR_ConfigPVD:000000000000007c $d
-     /tmp/ccTaJlj3.s:221    .text.HAL_PWR_EnablePVD:0000000000000000 $t
-     /tmp/ccTaJlj3.s:228    .text.HAL_PWR_EnablePVD:0000000000000000 HAL_PWR_EnablePVD
-     /tmp/ccTaJlj3.s:243    .text.HAL_PWR_EnablePVD:0000000000000008 $d
-     /tmp/ccTaJlj3.s:248    .text.HAL_PWR_DisablePVD:0000000000000000 $t
-     /tmp/ccTaJlj3.s:255    .text.HAL_PWR_DisablePVD:0000000000000000 HAL_PWR_DisablePVD
-     /tmp/ccTaJlj3.s:270    .text.HAL_PWR_DisablePVD:0000000000000008 $d
-     /tmp/ccTaJlj3.s:275    .text.HAL_PWR_EnableWakeUpPin:0000000000000000 $t
-     /tmp/ccTaJlj3.s:282    .text.HAL_PWR_EnableWakeUpPin:0000000000000000 HAL_PWR_EnableWakeUpPin
-     /tmp/ccTaJlj3.s:314    .text.HAL_PWR_EnableWakeUpPin:0000000000000014 $d
-     /tmp/ccTaJlj3.s:319    .text.HAL_PWR_DisableWakeUpPin:0000000000000000 $t
-     /tmp/ccTaJlj3.s:326    .text.HAL_PWR_DisableWakeUpPin:0000000000000000 HAL_PWR_DisableWakeUpPin
-     /tmp/ccTaJlj3.s:357    .text.HAL_PWR_DisableWakeUpPin:0000000000000014 $d
-     /tmp/ccTaJlj3.s:362    .text.HAL_PWR_EnterSLEEPMode:0000000000000000 $t
-     /tmp/ccTaJlj3.s:369    .text.HAL_PWR_EnterSLEEPMode:0000000000000000 HAL_PWR_EnterSLEEPMode
-     /tmp/ccTaJlj3.s:432    .text.HAL_PWR_EnterSLEEPMode:000000000000001c $d
-     /tmp/ccTaJlj3.s:439    .text.HAL_PWR_EnterSTOPMode:0000000000000000 $t
-     /tmp/ccTaJlj3.s:446    .text.HAL_PWR_EnterSTOPMode:0000000000000000 HAL_PWR_EnterSTOPMode
-     /tmp/ccTaJlj3.s:516    .text.HAL_PWR_EnterSTOPMode:0000000000000040 $d
-     /tmp/ccTaJlj3.s:524    .text.HAL_PWR_EnterSTANDBYMode:0000000000000000 $t
-     /tmp/ccTaJlj3.s:531    .text.HAL_PWR_EnterSTANDBYMode:0000000000000000 HAL_PWR_EnterSTANDBYMode
-     /tmp/ccTaJlj3.s:561    .text.HAL_PWR_EnterSTANDBYMode:0000000000000018 $d
-     /tmp/ccTaJlj3.s:569    .text.HAL_PWR_EnableSleepOnExit:0000000000000000 $t
-     /tmp/ccTaJlj3.s:576    .text.HAL_PWR_EnableSleepOnExit:0000000000000000 HAL_PWR_EnableSleepOnExit
-     /tmp/ccTaJlj3.s:592    .text.HAL_PWR_EnableSleepOnExit:000000000000000c $d
-     /tmp/ccTaJlj3.s:597    .text.HAL_PWR_DisableSleepOnExit:0000000000000000 $t
-     /tmp/ccTaJlj3.s:604    .text.HAL_PWR_DisableSleepOnExit:0000000000000000 HAL_PWR_DisableSleepOnExit
-     /tmp/ccTaJlj3.s:620    .text.HAL_PWR_DisableSleepOnExit:000000000000000c $d
-     /tmp/ccTaJlj3.s:625    .text.HAL_PWR_EnableSEVOnPend:0000000000000000 $t
-     /tmp/ccTaJlj3.s:632    .text.HAL_PWR_EnableSEVOnPend:0000000000000000 HAL_PWR_EnableSEVOnPend
-     /tmp/ccTaJlj3.s:648    .text.HAL_PWR_EnableSEVOnPend:000000000000000c $d
-     /tmp/ccTaJlj3.s:653    .text.HAL_PWR_DisableSEVOnPend:0000000000000000 $t
-     /tmp/ccTaJlj3.s:660    .text.HAL_PWR_DisableSEVOnPend:0000000000000000 HAL_PWR_DisableSEVOnPend
-     /tmp/ccTaJlj3.s:676    .text.HAL_PWR_DisableSEVOnPend:000000000000000c $d
-     /tmp/ccTaJlj3.s:681    .text.HAL_PWR_PVDCallback:0000000000000000 $t
-     /tmp/ccTaJlj3.s:688    .text.HAL_PWR_PVDCallback:0000000000000000 HAL_PWR_PVDCallback
-     /tmp/ccTaJlj3.s:700    .text.HAL_PWR_PVD_IRQHandler:0000000000000000 $t
-     /tmp/ccTaJlj3.s:707    .text.HAL_PWR_PVD_IRQHandler:0000000000000000 HAL_PWR_PVD_IRQHandler
-     /tmp/ccTaJlj3.s:739    .text.HAL_PWR_PVD_IRQHandler:000000000000001c $d
+     /tmp/ccBR9f2p.s:16     .text.PWR_OverloadWfe:0000000000000000 $t
+     /tmp/ccBR9f2p.s:22     .text.PWR_OverloadWfe:0000000000000000 PWR_OverloadWfe
+     /tmp/ccBR9f2p.s:46     .text.HAL_PWR_DeInit:0000000000000000 $t
+     /tmp/ccBR9f2p.s:53     .text.HAL_PWR_DeInit:0000000000000000 HAL_PWR_DeInit
+     /tmp/ccBR9f2p.s:73     .text.HAL_PWR_DeInit:0000000000000014 $d
+     /tmp/ccBR9f2p.s:78     .text.HAL_PWR_EnableBkUpAccess:0000000000000000 $t
+     /tmp/ccBR9f2p.s:85     .text.HAL_PWR_EnableBkUpAccess:0000000000000000 HAL_PWR_EnableBkUpAccess
+     /tmp/ccBR9f2p.s:100    .text.HAL_PWR_EnableBkUpAccess:0000000000000008 $d
+     /tmp/ccBR9f2p.s:105    .text.HAL_PWR_DisableBkUpAccess:0000000000000000 $t
+     /tmp/ccBR9f2p.s:112    .text.HAL_PWR_DisableBkUpAccess:0000000000000000 HAL_PWR_DisableBkUpAccess
+     /tmp/ccBR9f2p.s:127    .text.HAL_PWR_DisableBkUpAccess:0000000000000008 $d
+     /tmp/ccBR9f2p.s:132    .text.HAL_PWR_ConfigPVD:0000000000000000 $t
+     /tmp/ccBR9f2p.s:139    .text.HAL_PWR_ConfigPVD:0000000000000000 HAL_PWR_ConfigPVD
+     /tmp/ccBR9f2p.s:215    .text.HAL_PWR_ConfigPVD:000000000000007c $d
+     /tmp/ccBR9f2p.s:221    .text.HAL_PWR_EnablePVD:0000000000000000 $t
+     /tmp/ccBR9f2p.s:228    .text.HAL_PWR_EnablePVD:0000000000000000 HAL_PWR_EnablePVD
+     /tmp/ccBR9f2p.s:243    .text.HAL_PWR_EnablePVD:0000000000000008 $d
+     /tmp/ccBR9f2p.s:248    .text.HAL_PWR_DisablePVD:0000000000000000 $t
+     /tmp/ccBR9f2p.s:255    .text.HAL_PWR_DisablePVD:0000000000000000 HAL_PWR_DisablePVD
+     /tmp/ccBR9f2p.s:270    .text.HAL_PWR_DisablePVD:0000000000000008 $d
+     /tmp/ccBR9f2p.s:275    .text.HAL_PWR_EnableWakeUpPin:0000000000000000 $t
+     /tmp/ccBR9f2p.s:282    .text.HAL_PWR_EnableWakeUpPin:0000000000000000 HAL_PWR_EnableWakeUpPin
+     /tmp/ccBR9f2p.s:314    .text.HAL_PWR_EnableWakeUpPin:0000000000000014 $d
+     /tmp/ccBR9f2p.s:319    .text.HAL_PWR_DisableWakeUpPin:0000000000000000 $t
+     /tmp/ccBR9f2p.s:326    .text.HAL_PWR_DisableWakeUpPin:0000000000000000 HAL_PWR_DisableWakeUpPin
+     /tmp/ccBR9f2p.s:357    .text.HAL_PWR_DisableWakeUpPin:0000000000000014 $d
+     /tmp/ccBR9f2p.s:362    .text.HAL_PWR_EnterSLEEPMode:0000000000000000 $t
+     /tmp/ccBR9f2p.s:369    .text.HAL_PWR_EnterSLEEPMode:0000000000000000 HAL_PWR_EnterSLEEPMode
+     /tmp/ccBR9f2p.s:432    .text.HAL_PWR_EnterSLEEPMode:000000000000001c $d
+     /tmp/ccBR9f2p.s:439    .text.HAL_PWR_EnterSTOPMode:0000000000000000 $t
+     /tmp/ccBR9f2p.s:446    .text.HAL_PWR_EnterSTOPMode:0000000000000000 HAL_PWR_EnterSTOPMode
+     /tmp/ccBR9f2p.s:516    .text.HAL_PWR_EnterSTOPMode:0000000000000040 $d
+     /tmp/ccBR9f2p.s:524    .text.HAL_PWR_EnterSTANDBYMode:0000000000000000 $t
+     /tmp/ccBR9f2p.s:531    .text.HAL_PWR_EnterSTANDBYMode:0000000000000000 HAL_PWR_EnterSTANDBYMode
+     /tmp/ccBR9f2p.s:561    .text.HAL_PWR_EnterSTANDBYMode:0000000000000018 $d
+     /tmp/ccBR9f2p.s:569    .text.HAL_PWR_EnableSleepOnExit:0000000000000000 $t
+     /tmp/ccBR9f2p.s:576    .text.HAL_PWR_EnableSleepOnExit:0000000000000000 HAL_PWR_EnableSleepOnExit
+     /tmp/ccBR9f2p.s:592    .text.HAL_PWR_EnableSleepOnExit:000000000000000c $d
+     /tmp/ccBR9f2p.s:597    .text.HAL_PWR_DisableSleepOnExit:0000000000000000 $t
+     /tmp/ccBR9f2p.s:604    .text.HAL_PWR_DisableSleepOnExit:0000000000000000 HAL_PWR_DisableSleepOnExit
+     /tmp/ccBR9f2p.s:620    .text.HAL_PWR_DisableSleepOnExit:000000000000000c $d
+     /tmp/ccBR9f2p.s:625    .text.HAL_PWR_EnableSEVOnPend:0000000000000000 $t
+     /tmp/ccBR9f2p.s:632    .text.HAL_PWR_EnableSEVOnPend:0000000000000000 HAL_PWR_EnableSEVOnPend
+     /tmp/ccBR9f2p.s:648    .text.HAL_PWR_EnableSEVOnPend:000000000000000c $d
+     /tmp/ccBR9f2p.s:653    .text.HAL_PWR_DisableSEVOnPend:0000000000000000 $t
+     /tmp/ccBR9f2p.s:660    .text.HAL_PWR_DisableSEVOnPend:0000000000000000 HAL_PWR_DisableSEVOnPend
+     /tmp/ccBR9f2p.s:676    .text.HAL_PWR_DisableSEVOnPend:000000000000000c $d
+     /tmp/ccBR9f2p.s:681    .text.HAL_PWR_PVDCallback:0000000000000000 $t
+     /tmp/ccBR9f2p.s:688    .text.HAL_PWR_PVDCallback:0000000000000000 HAL_PWR_PVDCallback
+     /tmp/ccBR9f2p.s:700    .text.HAL_PWR_PVD_IRQHandler:0000000000000000 $t
+     /tmp/ccBR9f2p.s:707    .text.HAL_PWR_PVD_IRQHandler:0000000000000000 HAL_PWR_PVD_IRQHandler
+     /tmp/ccBR9f2p.s:739    .text.HAL_PWR_PVD_IRQHandler:000000000000001c $d
                      .debug_frame:0000000000000010 $d
 
 NO UNDEFINED SYMBOLS
-ARM GAS  /tmp/ccTaJlj3.s 			page 35
+ARM GAS  /tmp/ccBR9f2p.s 			page 35
 
 

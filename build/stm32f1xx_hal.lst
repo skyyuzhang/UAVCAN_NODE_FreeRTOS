@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc4x8Jgu.s 			page 1
+ARM GAS  /tmp/ccMAU1GR.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc4x8Jgu.s 			page 1
   31:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   *      this list of conditions and the following disclaimer in the documentation
   32:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   *      and/or other materials provided with the distribution.
   33:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   *   3. Neither the name of STMicroelectronics nor the names of its contributors
-ARM GAS  /tmp/cc4x8Jgu.s 			page 2
+ARM GAS  /tmp/ccMAU1GR.s 			page 2
 
 
   34:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   *      may be used to endorse or promote products derived from this software
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc4x8Jgu.s 			page 1
   88:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** 
   89:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** /* Private macro -------------------------------------------------------------*/
   90:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** /* Private variables ---------------------------------------------------------*/
-ARM GAS  /tmp/cc4x8Jgu.s 			page 3
+ARM GAS  /tmp/ccMAU1GR.s 			page 3
 
 
   91:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** 
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc4x8Jgu.s 			page 1
  145:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   *           Configure the Flash prefetch.
  146:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   *           Configures the SysTick to generate an interrupt each 1 millisecond,
  147:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   *           which is clocked by the HSI (at this stage, the clock is not yet
-ARM GAS  /tmp/cc4x8Jgu.s 			page 4
+ARM GAS  /tmp/ccMAU1GR.s 			page 4
 
 
  148:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   *           configured and thus the system is running from the internal HSI at 16 MHz).
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc4x8Jgu.s 			page 1
  202:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   __HAL_RCC_AHB_RELEASE_RESET();
  203:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** #endif
  204:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** 
-ARM GAS  /tmp/cc4x8Jgu.s 			page 5
+ARM GAS  /tmp/ccMAU1GR.s 			page 5
 
 
  205:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   /* De-Init the low level hardware */
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc4x8Jgu.s 			page 1
   59              		.thumb_func
   60              		.fpu softvfp
   62              	HAL_DeInit:
-ARM GAS  /tmp/cc4x8Jgu.s 			page 6
+ARM GAS  /tmp/ccMAU1GR.s 			page 6
 
 
   63              	.LFB65:
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc4x8Jgu.s 			page 1
  232:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** }
  233:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** 
  234:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** /**
-ARM GAS  /tmp/cc4x8Jgu.s 			page 7
+ARM GAS  /tmp/ccMAU1GR.s 			page 7
 
 
  235:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   * @brief This function configures the source of the time base.
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc4x8Jgu.s 			page 1
  263:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   }
  264:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   else
  265:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   {
-ARM GAS  /tmp/cc4x8Jgu.s 			page 8
+ARM GAS  /tmp/ccMAU1GR.s 			page 8
 
 
  266:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****     return HAL_ERROR;
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc4x8Jgu.s 			page 1
  179              		@ args = 0, pretend = 0, frame = 0
  180              		@ frame_needed = 0, uses_anonymous_args = 0
  181 0000 08B5     		push	{r3, lr}
-ARM GAS  /tmp/cc4x8Jgu.s 			page 9
+ARM GAS  /tmp/ccMAU1GR.s 			page 9
 
 
  182              	.LCFI2:
@@ -498,7 +498,7 @@ ARM GAS  /tmp/cc4x8Jgu.s 			page 1
  194              	.LVL8:
  176:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** 
  195              		.loc 1 176 0
- 196 0012 0020     		movs	r0, #0
+ 196 0012 0F20     		movs	r0, #15
  197 0014 FFF7FEFF 		bl	HAL_InitTick
  198              	.LVL9:
  179:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** 
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc4x8Jgu.s 			page 1
  283:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****  ===============================================================================
  284:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****     [..]  This section provides functions allowing to:
  285:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****       (+) Provide a tick value in millisecond
-ARM GAS  /tmp/cc4x8Jgu.s 			page 10
+ARM GAS  /tmp/ccMAU1GR.s 			page 10
 
 
  286:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****       (+) Provide a blocking delay in millisecond
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cc4x8Jgu.s 			page 1
  252              	.LFB70:
  312:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** }
  313:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** 
-ARM GAS  /tmp/cc4x8Jgu.s 			page 11
+ARM GAS  /tmp/ccMAU1GR.s 			page 11
 
 
  314:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** /**
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cc4x8Jgu.s 			page 1
  290 0006 00BF     		.align	2
  291              	.L26:
  292 0008 00000000 		.word	.LANCHOR1
-ARM GAS  /tmp/cc4x8Jgu.s 			page 12
+ARM GAS  /tmp/ccMAU1GR.s 			page 12
 
 
  293              		.cfi_endproc
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cc4x8Jgu.s 			page 1
  333              	.L30:
  340:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   assert_param(IS_TICKFREQ(Freq));
  334              		.loc 1 340 0
-ARM GAS  /tmp/cc4x8Jgu.s 			page 13
+ARM GAS  /tmp/ccMAU1GR.s 			page 13
 
 
  335 0018 0020     		movs	r0, #0
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cc4x8Jgu.s 			page 1
  379              		.fpu softvfp
  381              	HAL_Delay:
  382              	.LFB74:
-ARM GAS  /tmp/cc4x8Jgu.s 			page 14
+ARM GAS  /tmp/ccMAU1GR.s 			page 14
 
 
  362:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** 
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cc4x8Jgu.s 			page 1
  413 001a 401B     		subs	r0, r0, r5
  414 001c 8442     		cmp	r4, r0
  415 001e FAD8     		bhi	.L39
-ARM GAS  /tmp/cc4x8Jgu.s 			page 15
+ARM GAS  /tmp/ccMAU1GR.s 			page 15
 
 
  386:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   {
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cc4x8Jgu.s 			page 1
  455              		.align	1
  456              		.weak	HAL_ResumeTick
  457              		.syntax unified
-ARM GAS  /tmp/cc4x8Jgu.s 			page 16
+ARM GAS  /tmp/ccMAU1GR.s 			page 16
 
 
  458              		.thumb
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cc4x8Jgu.s 			page 1
  427:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** {
  492              		.loc 1 427 0
  493              		.cfi_startproc
-ARM GAS  /tmp/cc4x8Jgu.s 			page 17
+ARM GAS  /tmp/ccMAU1GR.s 			page 17
 
 
  494              		@ args = 0, pretend = 0, frame = 0
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cc4x8Jgu.s 			page 1
  532              		.cfi_endproc
  533              	.LFE78:
  535              		.section	.text.HAL_GetDEVID,"ax",%progbits
-ARM GAS  /tmp/cc4x8Jgu.s 			page 18
+ARM GAS  /tmp/ccMAU1GR.s 			page 18
 
 
  536              		.align	1
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cc4x8Jgu.s 			page 1
  466:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   */
  467:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** void HAL_DBGMCU_EnableDBGSleepMode(void)
  468:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** {
-ARM GAS  /tmp/cc4x8Jgu.s 			page 19
+ARM GAS  /tmp/ccMAU1GR.s 			page 19
 
 
  573              		.loc 1 468 0
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/cc4x8Jgu.s 			page 1
  612              	.L63:
  613              		.align	2
  614              	.L62:
-ARM GAS  /tmp/cc4x8Jgu.s 			page 20
+ARM GAS  /tmp/ccMAU1GR.s 			page 20
 
 
  615 000c 002004E0 		.word	-536600576
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/cc4x8Jgu.s 			page 1
  641              		.align	2
  642              	.L65:
  643 000c 002004E0 		.word	-536600576
-ARM GAS  /tmp/cc4x8Jgu.s 			page 21
+ARM GAS  /tmp/ccMAU1GR.s 			page 21
 
 
  644              		.cfi_endproc
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/cc4x8Jgu.s 			page 1
  533:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** 
  534:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** /**
  535:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   * @brief  Enable the Debug Module during STANDBY mode
-ARM GAS  /tmp/cc4x8Jgu.s 			page 22
+ARM GAS  /tmp/ccMAU1GR.s 			page 22
 
 
  536:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   * Note: On devices STM32F10xx8 and STM32F10xxB,
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/cc4x8Jgu.s 			page 1
  714              		.cfi_startproc
  715              		@ args = 0, pretend = 0, frame = 0
  716              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/cc4x8Jgu.s 			page 23
+ARM GAS  /tmp/ccMAU1GR.s 			page 23
 
 
  717              		@ link register save eliminated.
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/cc4x8Jgu.s 			page 1
  760              	.L78:
  761              		.align	2
  762              	.L77:
-ARM GAS  /tmp/cc4x8Jgu.s 			page 24
+ARM GAS  /tmp/ccMAU1GR.s 			page 24
 
 
  763 0014 E8F7FF1F 		.word	536868840
@@ -1412,85 +1412,85 @@ ARM GAS  /tmp/cc4x8Jgu.s 			page 1
  796              		.file 11 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
  797              		.file 12 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
  798              		.file 13 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
-ARM GAS  /tmp/cc4x8Jgu.s 			page 25
+ARM GAS  /tmp/ccMAU1GR.s 			page 25
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f1xx_hal.c
-     /tmp/cc4x8Jgu.s:16     .text.HAL_MspInit:0000000000000000 $t
-     /tmp/cc4x8Jgu.s:23     .text.HAL_MspInit:0000000000000000 HAL_MspInit
-     /tmp/cc4x8Jgu.s:36     .text.HAL_MspDeInit:0000000000000000 $t
-     /tmp/cc4x8Jgu.s:43     .text.HAL_MspDeInit:0000000000000000 HAL_MspDeInit
-     /tmp/cc4x8Jgu.s:55     .text.HAL_DeInit:0000000000000000 $t
-     /tmp/cc4x8Jgu.s:62     .text.HAL_DeInit:0000000000000000 HAL_DeInit
-     /tmp/cc4x8Jgu.s:94     .text.HAL_DeInit:000000000000001c $d
-     /tmp/cc4x8Jgu.s:99     .text.HAL_InitTick:0000000000000000 $t
-     /tmp/cc4x8Jgu.s:106    .text.HAL_InitTick:0000000000000000 HAL_InitTick
-     /tmp/cc4x8Jgu.s:161    .text.HAL_InitTick:0000000000000040 $d
-     /tmp/cc4x8Jgu.s:168    .text.HAL_Init:0000000000000000 $t
-     /tmp/cc4x8Jgu.s:175    .text.HAL_Init:0000000000000000 HAL_Init
-     /tmp/cc4x8Jgu.s:208    .text.HAL_Init:0000000000000020 $d
-     /tmp/cc4x8Jgu.s:213    .text.HAL_IncTick:0000000000000000 $t
-     /tmp/cc4x8Jgu.s:220    .text.HAL_IncTick:0000000000000000 HAL_IncTick
-     /tmp/cc4x8Jgu.s:238    .text.HAL_IncTick:0000000000000010 $d
+     /tmp/ccMAU1GR.s:16     .text.HAL_MspInit:0000000000000000 $t
+     /tmp/ccMAU1GR.s:23     .text.HAL_MspInit:0000000000000000 HAL_MspInit
+     /tmp/ccMAU1GR.s:36     .text.HAL_MspDeInit:0000000000000000 $t
+     /tmp/ccMAU1GR.s:43     .text.HAL_MspDeInit:0000000000000000 HAL_MspDeInit
+     /tmp/ccMAU1GR.s:55     .text.HAL_DeInit:0000000000000000 $t
+     /tmp/ccMAU1GR.s:62     .text.HAL_DeInit:0000000000000000 HAL_DeInit
+     /tmp/ccMAU1GR.s:94     .text.HAL_DeInit:000000000000001c $d
+     /tmp/ccMAU1GR.s:99     .text.HAL_InitTick:0000000000000000 $t
+     /tmp/ccMAU1GR.s:106    .text.HAL_InitTick:0000000000000000 HAL_InitTick
+     /tmp/ccMAU1GR.s:161    .text.HAL_InitTick:0000000000000040 $d
+     /tmp/ccMAU1GR.s:168    .text.HAL_Init:0000000000000000 $t
+     /tmp/ccMAU1GR.s:175    .text.HAL_Init:0000000000000000 HAL_Init
+     /tmp/ccMAU1GR.s:208    .text.HAL_Init:0000000000000020 $d
+     /tmp/ccMAU1GR.s:213    .text.HAL_IncTick:0000000000000000 $t
+     /tmp/ccMAU1GR.s:220    .text.HAL_IncTick:0000000000000000 HAL_IncTick
+     /tmp/ccMAU1GR.s:238    .text.HAL_IncTick:0000000000000010 $d
                             *COM*:0000000000000004 uwTick
-     /tmp/cc4x8Jgu.s:244    .text.HAL_GetTick:0000000000000000 $t
-     /tmp/cc4x8Jgu.s:251    .text.HAL_GetTick:0000000000000000 HAL_GetTick
-     /tmp/cc4x8Jgu.s:266    .text.HAL_GetTick:0000000000000008 $d
-     /tmp/cc4x8Jgu.s:271    .text.HAL_GetTickPrio:0000000000000000 $t
-     /tmp/cc4x8Jgu.s:278    .text.HAL_GetTickPrio:0000000000000000 HAL_GetTickPrio
-     /tmp/cc4x8Jgu.s:292    .text.HAL_GetTickPrio:0000000000000008 $d
-     /tmp/cc4x8Jgu.s:297    .text.HAL_SetTickFreq:0000000000000000 $t
-     /tmp/cc4x8Jgu.s:304    .text.HAL_SetTickFreq:0000000000000000 HAL_SetTickFreq
-     /tmp/cc4x8Jgu.s:342    .text.HAL_SetTickFreq:000000000000001c $d
-     /tmp/cc4x8Jgu.s:348    .text.HAL_GetTickFreq:0000000000000000 $t
-     /tmp/cc4x8Jgu.s:355    .text.HAL_GetTickFreq:0000000000000000 HAL_GetTickFreq
-     /tmp/cc4x8Jgu.s:369    .text.HAL_GetTickFreq:0000000000000008 $d
-     /tmp/cc4x8Jgu.s:374    .text.HAL_Delay:0000000000000000 $t
-     /tmp/cc4x8Jgu.s:381    .text.HAL_Delay:0000000000000000 HAL_Delay
-     /tmp/cc4x8Jgu.s:422    .text.HAL_Delay:0000000000000024 $d
-     /tmp/cc4x8Jgu.s:427    .text.HAL_SuspendTick:0000000000000000 $t
-     /tmp/cc4x8Jgu.s:434    .text.HAL_SuspendTick:0000000000000000 HAL_SuspendTick
-     /tmp/cc4x8Jgu.s:450    .text.HAL_SuspendTick:000000000000000c $d
-     /tmp/cc4x8Jgu.s:455    .text.HAL_ResumeTick:0000000000000000 $t
-     /tmp/cc4x8Jgu.s:462    .text.HAL_ResumeTick:0000000000000000 HAL_ResumeTick
-     /tmp/cc4x8Jgu.s:478    .text.HAL_ResumeTick:000000000000000c $d
-     /tmp/cc4x8Jgu.s:483    .text.HAL_GetHalVersion:0000000000000000 $t
-     /tmp/cc4x8Jgu.s:490    .text.HAL_GetHalVersion:0000000000000000 HAL_GetHalVersion
-     /tmp/cc4x8Jgu.s:503    .text.HAL_GetHalVersion:0000000000000004 $d
-     /tmp/cc4x8Jgu.s:508    .text.HAL_GetREVID:0000000000000000 $t
-     /tmp/cc4x8Jgu.s:515    .text.HAL_GetREVID:0000000000000000 HAL_GetREVID
-     /tmp/cc4x8Jgu.s:531    .text.HAL_GetREVID:0000000000000008 $d
-     /tmp/cc4x8Jgu.s:536    .text.HAL_GetDEVID:0000000000000000 $t
-     /tmp/cc4x8Jgu.s:543    .text.HAL_GetDEVID:0000000000000000 HAL_GetDEVID
-     /tmp/cc4x8Jgu.s:559    .text.HAL_GetDEVID:000000000000000c $d
-     /tmp/cc4x8Jgu.s:564    .text.HAL_DBGMCU_EnableDBGSleepMode:0000000000000000 $t
-     /tmp/cc4x8Jgu.s:571    .text.HAL_DBGMCU_EnableDBGSleepMode:0000000000000000 HAL_DBGMCU_EnableDBGSleepMode
-     /tmp/cc4x8Jgu.s:587    .text.HAL_DBGMCU_EnableDBGSleepMode:000000000000000c $d
-     /tmp/cc4x8Jgu.s:592    .text.HAL_DBGMCU_DisableDBGSleepMode:0000000000000000 $t
-     /tmp/cc4x8Jgu.s:599    .text.HAL_DBGMCU_DisableDBGSleepMode:0000000000000000 HAL_DBGMCU_DisableDBGSleepMode
-     /tmp/cc4x8Jgu.s:615    .text.HAL_DBGMCU_DisableDBGSleepMode:000000000000000c $d
-     /tmp/cc4x8Jgu.s:620    .text.HAL_DBGMCU_EnableDBGStopMode:0000000000000000 $t
-     /tmp/cc4x8Jgu.s:627    .text.HAL_DBGMCU_EnableDBGStopMode:0000000000000000 HAL_DBGMCU_EnableDBGStopMode
-ARM GAS  /tmp/cc4x8Jgu.s 			page 26
+     /tmp/ccMAU1GR.s:244    .text.HAL_GetTick:0000000000000000 $t
+     /tmp/ccMAU1GR.s:251    .text.HAL_GetTick:0000000000000000 HAL_GetTick
+     /tmp/ccMAU1GR.s:266    .text.HAL_GetTick:0000000000000008 $d
+     /tmp/ccMAU1GR.s:271    .text.HAL_GetTickPrio:0000000000000000 $t
+     /tmp/ccMAU1GR.s:278    .text.HAL_GetTickPrio:0000000000000000 HAL_GetTickPrio
+     /tmp/ccMAU1GR.s:292    .text.HAL_GetTickPrio:0000000000000008 $d
+     /tmp/ccMAU1GR.s:297    .text.HAL_SetTickFreq:0000000000000000 $t
+     /tmp/ccMAU1GR.s:304    .text.HAL_SetTickFreq:0000000000000000 HAL_SetTickFreq
+     /tmp/ccMAU1GR.s:342    .text.HAL_SetTickFreq:000000000000001c $d
+     /tmp/ccMAU1GR.s:348    .text.HAL_GetTickFreq:0000000000000000 $t
+     /tmp/ccMAU1GR.s:355    .text.HAL_GetTickFreq:0000000000000000 HAL_GetTickFreq
+     /tmp/ccMAU1GR.s:369    .text.HAL_GetTickFreq:0000000000000008 $d
+     /tmp/ccMAU1GR.s:374    .text.HAL_Delay:0000000000000000 $t
+     /tmp/ccMAU1GR.s:381    .text.HAL_Delay:0000000000000000 HAL_Delay
+     /tmp/ccMAU1GR.s:422    .text.HAL_Delay:0000000000000024 $d
+     /tmp/ccMAU1GR.s:427    .text.HAL_SuspendTick:0000000000000000 $t
+     /tmp/ccMAU1GR.s:434    .text.HAL_SuspendTick:0000000000000000 HAL_SuspendTick
+     /tmp/ccMAU1GR.s:450    .text.HAL_SuspendTick:000000000000000c $d
+     /tmp/ccMAU1GR.s:455    .text.HAL_ResumeTick:0000000000000000 $t
+     /tmp/ccMAU1GR.s:462    .text.HAL_ResumeTick:0000000000000000 HAL_ResumeTick
+     /tmp/ccMAU1GR.s:478    .text.HAL_ResumeTick:000000000000000c $d
+     /tmp/ccMAU1GR.s:483    .text.HAL_GetHalVersion:0000000000000000 $t
+     /tmp/ccMAU1GR.s:490    .text.HAL_GetHalVersion:0000000000000000 HAL_GetHalVersion
+     /tmp/ccMAU1GR.s:503    .text.HAL_GetHalVersion:0000000000000004 $d
+     /tmp/ccMAU1GR.s:508    .text.HAL_GetREVID:0000000000000000 $t
+     /tmp/ccMAU1GR.s:515    .text.HAL_GetREVID:0000000000000000 HAL_GetREVID
+     /tmp/ccMAU1GR.s:531    .text.HAL_GetREVID:0000000000000008 $d
+     /tmp/ccMAU1GR.s:536    .text.HAL_GetDEVID:0000000000000000 $t
+     /tmp/ccMAU1GR.s:543    .text.HAL_GetDEVID:0000000000000000 HAL_GetDEVID
+     /tmp/ccMAU1GR.s:559    .text.HAL_GetDEVID:000000000000000c $d
+     /tmp/ccMAU1GR.s:564    .text.HAL_DBGMCU_EnableDBGSleepMode:0000000000000000 $t
+     /tmp/ccMAU1GR.s:571    .text.HAL_DBGMCU_EnableDBGSleepMode:0000000000000000 HAL_DBGMCU_EnableDBGSleepMode
+     /tmp/ccMAU1GR.s:587    .text.HAL_DBGMCU_EnableDBGSleepMode:000000000000000c $d
+     /tmp/ccMAU1GR.s:592    .text.HAL_DBGMCU_DisableDBGSleepMode:0000000000000000 $t
+     /tmp/ccMAU1GR.s:599    .text.HAL_DBGMCU_DisableDBGSleepMode:0000000000000000 HAL_DBGMCU_DisableDBGSleepMode
+     /tmp/ccMAU1GR.s:615    .text.HAL_DBGMCU_DisableDBGSleepMode:000000000000000c $d
+     /tmp/ccMAU1GR.s:620    .text.HAL_DBGMCU_EnableDBGStopMode:0000000000000000 $t
+     /tmp/ccMAU1GR.s:627    .text.HAL_DBGMCU_EnableDBGStopMode:0000000000000000 HAL_DBGMCU_EnableDBGStopMode
+ARM GAS  /tmp/ccMAU1GR.s 			page 26
 
 
-     /tmp/cc4x8Jgu.s:643    .text.HAL_DBGMCU_EnableDBGStopMode:000000000000000c $d
-     /tmp/cc4x8Jgu.s:648    .text.HAL_DBGMCU_DisableDBGStopMode:0000000000000000 $t
-     /tmp/cc4x8Jgu.s:655    .text.HAL_DBGMCU_DisableDBGStopMode:0000000000000000 HAL_DBGMCU_DisableDBGStopMode
-     /tmp/cc4x8Jgu.s:671    .text.HAL_DBGMCU_DisableDBGStopMode:000000000000000c $d
-     /tmp/cc4x8Jgu.s:676    .text.HAL_DBGMCU_EnableDBGStandbyMode:0000000000000000 $t
-     /tmp/cc4x8Jgu.s:683    .text.HAL_DBGMCU_EnableDBGStandbyMode:0000000000000000 HAL_DBGMCU_EnableDBGStandbyMode
-     /tmp/cc4x8Jgu.s:699    .text.HAL_DBGMCU_EnableDBGStandbyMode:000000000000000c $d
-     /tmp/cc4x8Jgu.s:704    .text.HAL_DBGMCU_DisableDBGStandbyMode:0000000000000000 $t
-     /tmp/cc4x8Jgu.s:711    .text.HAL_DBGMCU_DisableDBGStandbyMode:0000000000000000 HAL_DBGMCU_DisableDBGStandbyMode
-     /tmp/cc4x8Jgu.s:727    .text.HAL_DBGMCU_DisableDBGStandbyMode:000000000000000c $d
-     /tmp/cc4x8Jgu.s:732    .text.HAL_GetUID:0000000000000000 $t
-     /tmp/cc4x8Jgu.s:739    .text.HAL_GetUID:0000000000000000 HAL_GetUID
-     /tmp/cc4x8Jgu.s:763    .text.HAL_GetUID:0000000000000014 $d
-     /tmp/cc4x8Jgu.s:776    .data.uwTickFreq:0000000000000000 uwTickFreq
-     /tmp/cc4x8Jgu.s:783    .data.uwTickPrio:0000000000000000 uwTickPrio
-     /tmp/cc4x8Jgu.s:779    .data.uwTickPrio:0000000000000000 $d
+     /tmp/ccMAU1GR.s:643    .text.HAL_DBGMCU_EnableDBGStopMode:000000000000000c $d
+     /tmp/ccMAU1GR.s:648    .text.HAL_DBGMCU_DisableDBGStopMode:0000000000000000 $t
+     /tmp/ccMAU1GR.s:655    .text.HAL_DBGMCU_DisableDBGStopMode:0000000000000000 HAL_DBGMCU_DisableDBGStopMode
+     /tmp/ccMAU1GR.s:671    .text.HAL_DBGMCU_DisableDBGStopMode:000000000000000c $d
+     /tmp/ccMAU1GR.s:676    .text.HAL_DBGMCU_EnableDBGStandbyMode:0000000000000000 $t
+     /tmp/ccMAU1GR.s:683    .text.HAL_DBGMCU_EnableDBGStandbyMode:0000000000000000 HAL_DBGMCU_EnableDBGStandbyMode
+     /tmp/ccMAU1GR.s:699    .text.HAL_DBGMCU_EnableDBGStandbyMode:000000000000000c $d
+     /tmp/ccMAU1GR.s:704    .text.HAL_DBGMCU_DisableDBGStandbyMode:0000000000000000 $t
+     /tmp/ccMAU1GR.s:711    .text.HAL_DBGMCU_DisableDBGStandbyMode:0000000000000000 HAL_DBGMCU_DisableDBGStandbyMode
+     /tmp/ccMAU1GR.s:727    .text.HAL_DBGMCU_DisableDBGStandbyMode:000000000000000c $d
+     /tmp/ccMAU1GR.s:732    .text.HAL_GetUID:0000000000000000 $t
+     /tmp/ccMAU1GR.s:739    .text.HAL_GetUID:0000000000000000 HAL_GetUID
+     /tmp/ccMAU1GR.s:763    .text.HAL_GetUID:0000000000000014 $d
+     /tmp/ccMAU1GR.s:776    .data.uwTickFreq:0000000000000000 uwTickFreq
+     /tmp/ccMAU1GR.s:783    .data.uwTickPrio:0000000000000000 uwTickPrio
+     /tmp/ccMAU1GR.s:779    .data.uwTickPrio:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS

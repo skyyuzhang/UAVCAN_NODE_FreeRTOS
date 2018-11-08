@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccELtumO.s 			page 1
+ARM GAS  /tmp/ccoDLUnf.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccELtumO.s 			page 1
   31:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   activated or not.
   32:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c **** 
   33:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   [..]
-ARM GAS  /tmp/ccELtumO.s 			page 2
+ARM GAS  /tmp/ccoDLUnf.s 			page 2
 
 
   34:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   In Output or Alternate mode, each IO can be configured on open-drain or push-pull
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccELtumO.s 			page 1
   88:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c **** 
   89:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   @endverbatim
   90:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   ******************************************************************************
-ARM GAS  /tmp/ccELtumO.s 			page 3
+ARM GAS  /tmp/ccoDLUnf.s 			page 3
 
 
   91:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   * @attention
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccELtumO.s 			page 1
  145:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c **** #define GPIO_OUTPUT_TYPE      0x00000010U
  146:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c **** 
  147:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c **** #define GPIO_NUMBER           16U
-ARM GAS  /tmp/ccELtumO.s 			page 4
+ARM GAS  /tmp/ccoDLUnf.s 			page 4
 
 
  148:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c **** 
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccELtumO.s 			page 1
   32              	.LCFI0:
   33              		.cfi_def_cfa_offset 20
   34              		.cfi_offset 4, -20
-ARM GAS  /tmp/ccELtumO.s 			page 5
+ARM GAS  /tmp/ccoDLUnf.s 			page 5
 
 
   35              		.cfi_offset 5, -16
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccELtumO.s 			page 1
  230:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****           config = GPIO_Init->Speed + GPIO_CR_CNF_GP_OUTPUT_PP;
   55              		.loc 1 230 0
   56 0014 CE68     		ldr	r6, [r1, #12]
-ARM GAS  /tmp/ccELtumO.s 			page 6
+ARM GAS  /tmp/ccoDLUnf.s 			page 6
 
 
   57              	.LVL3:
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccELtumO.s 			page 1
  283:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c **** 
  284:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****         /* If we are configuring the pin in INPUT analog mode */
  285:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****         case GPIO_MODE_ANALOG:
-ARM GAS  /tmp/ccELtumO.s 			page 7
+ARM GAS  /tmp/ccoDLUnf.s 			page 7
 
 
  286:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****           config = GPIO_CR_MODE_INPUT + GPIO_CR_CNF_ANALOG;
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccELtumO.s 			page 1
   91 0048 45F00105 		orr	r5, r5, #1
   92 004c 9561     		str	r5, [r2, #24]
   93 004e 9269     		ldr	r2, [r2, #24]
-ARM GAS  /tmp/ccELtumO.s 			page 8
+ARM GAS  /tmp/ccoDLUnf.s 			page 8
 
 
   94 0050 02F00102 		and	r2, r2, #1
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccELtumO.s 			page 1
  140 00ac 4A68     		ldr	r2, [r1, #4]
  141              	.LVL12:
  142 00ae 12F4803F 		tst	r2, #65536
-ARM GAS  /tmp/ccELtumO.s 			page 9
+ARM GAS  /tmp/ccoDLUnf.s 			page 9
 
 
  143 00b2 75D0     		beq	.L20
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccELtumO.s 			page 1
  341:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****           CLEAR_BIT(EXTI->RTSR, iocurrent);
  342:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****         }
  343:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c **** 
-ARM GAS  /tmp/ccELtumO.s 			page 10
+ARM GAS  /tmp/ccoDLUnf.s 			page 10
 
 
  344:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****         /* Enable or disable the falling trigger */
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccELtumO.s 			page 1
  215              	.LVL19:
  216 011a 0436     		adds	r6, r6, #4
  217              	.LVL20:
-ARM GAS  /tmp/ccELtumO.s 			page 11
+ARM GAS  /tmp/ccoDLUnf.s 			page 11
 
 
  238:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c **** 
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccELtumO.s 			page 1
  264 0164 57E7     		b	.L11
  265              	.L5:
  251:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****           break;
-ARM GAS  /tmp/ccELtumO.s 			page 12
+ARM GAS  /tmp/ccoDLUnf.s 			page 12
 
 
  266              		.loc 1 251 0
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccELtumO.s 			page 1
  312 0194 4FF0010E 		mov	lr, #1
  313              	.LVL35:
  314 0198 81E7     		b	.L19
-ARM GAS  /tmp/ccELtumO.s 			page 13
+ARM GAS  /tmp/ccoDLUnf.s 			page 13
 
 
  315              	.LVL36:
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccELtumO.s 			page 1
  357              		@ sp needed
  358 01d2 F0BD     		pop	{r4, r5, r6, r7, pc}
  359              	.LVL42:
-ARM GAS  /tmp/ccELtumO.s 			page 14
+ARM GAS  /tmp/ccoDLUnf.s 			page 14
 
 
  360              	.L41:
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccELtumO.s 			page 1
  394              		.cfi_def_cfa_offset 20
  395              		.cfi_offset 4, -20
  396              		.cfi_offset 5, -16
-ARM GAS  /tmp/ccELtumO.s 			page 15
+ARM GAS  /tmp/ccoDLUnf.s 			page 15
 
 
  397              		.cfi_offset 6, -12
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccELtumO.s 			page 1
  429 0038 2A4C     		ldr	r4, .L65
  430 003a 54F82660 		ldr	r6, [r4, r6, lsl #2]
  431              	.LVL49:
-ARM GAS  /tmp/ccELtumO.s 			page 16
+ARM GAS  /tmp/ccoDLUnf.s 			page 16
 
 
  401:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****       tmp &= 0x0FU << (4U * (position & 0x03U));
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccELtumO.s 			page 1
  468 0072 31FA02F3 		lsrs	r3, r1, r2
  469 0076 29D0     		beq	.L63
  381:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c **** 
-ARM GAS  /tmp/ccELtumO.s 			page 17
+ARM GAS  /tmp/ccoDLUnf.s 			page 17
 
 
  470              		.loc 1 381 0
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccELtumO.s 			page 1
  516 00b0 0E4C     		ldr	r4, .L65+8
  517 00b2 2568     		ldr	r5, [r4]
  518 00b4 1D40     		ands	r5, r5, r3
-ARM GAS  /tmp/ccELtumO.s 			page 18
+ARM GAS  /tmp/ccoDLUnf.s 			page 18
 
 
  519 00b6 2560     		str	r5, [r4]
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccELtumO.s 			page 1
  563 00de F0B5     		push	{r4, r5, r6, r7, lr}
  564              	.LCFI5:
  565              		.cfi_def_cfa_offset 20
-ARM GAS  /tmp/ccELtumO.s 			page 19
+ARM GAS  /tmp/ccoDLUnf.s 			page 19
 
 
  566              		.cfi_offset 4, -20
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccELtumO.s 			page 1
  441:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   * @param  GPIOx: where x can be (A..G depending on device used) to select the GPIO peripheral
  442:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   * @param  GPIO_Pin: specifies the port bit to read.
  443:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   *         This parameter can be GPIO_PIN_x where x can be (0..15).
-ARM GAS  /tmp/ccELtumO.s 			page 20
+ARM GAS  /tmp/ccoDLUnf.s 			page 20
 
 
  444:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   * @retval The input port pin value.
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccELtumO.s 			page 1
  465:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   * @brief  Sets or clears the selected data port bit.
  466:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   *
  467:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   * @note   This function uses GPIOx_BSRR register to allow atomic read/modify
-ARM GAS  /tmp/ccELtumO.s 			page 21
+ARM GAS  /tmp/ccoDLUnf.s 			page 21
 
 
  468:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   *         accesses. In this way, there is no risk of an IRQ occurring between
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccELtumO.s 			page 1
  665              	.LFB68:
  493:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   }
  494:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c **** }
-ARM GAS  /tmp/ccELtumO.s 			page 22
+ARM GAS  /tmp/ccoDLUnf.s 			page 22
 
 
  495:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c **** 
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccELtumO.s 			page 1
  695              		@ link register save eliminated.
  696              	.LVL76:
  697 0000 82B0     		sub	sp, sp, #8
-ARM GAS  /tmp/ccELtumO.s 			page 23
+ARM GAS  /tmp/ccoDLUnf.s 			page 23
 
 
  698              	.LCFI7:
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccELtumO.s 			page 1
  726              		.loc 1 547 0
  727 0026 02B0     		add	sp, sp, #8
  728              	.LCFI8:
-ARM GAS  /tmp/ccELtumO.s 			page 24
+ARM GAS  /tmp/ccoDLUnf.s 			page 24
 
 
  729              		.cfi_remember_state
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccELtumO.s 			page 1
  761              		.cfi_endproc
  762              	.LFE71:
  764              		.section	.text.HAL_GPIO_EXTI_IRQHandler,"ax",%progbits
-ARM GAS  /tmp/ccELtumO.s 			page 25
+ARM GAS  /tmp/ccoDLUnf.s 			page 25
 
 
  765              		.align	1
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccELtumO.s 			page 1
  815              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
  816              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
  817              		.file 7 "/usr/bin/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/sys/lock.h"
-ARM GAS  /tmp/ccELtumO.s 			page 26
+ARM GAS  /tmp/ccoDLUnf.s 			page 26
 
 
  818              		.file 8 "/usr/bin/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/sys/_types.h"
@@ -1507,30 +1507,30 @@ ARM GAS  /tmp/ccELtumO.s 			page 1
  821              		.file 11 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
  822              		.file 12 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
  823              		.file 13 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
-ARM GAS  /tmp/ccELtumO.s 			page 27
+ARM GAS  /tmp/ccoDLUnf.s 			page 27
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f1xx_hal_gpio.c
-     /tmp/ccELtumO.s:16     .text.HAL_GPIO_Init:0000000000000000 $t
-     /tmp/ccELtumO.s:23     .text.HAL_GPIO_Init:0000000000000000 HAL_GPIO_Init
-     /tmp/ccELtumO.s:363    .text.HAL_GPIO_Init:00000000000001d4 $d
-     /tmp/ccELtumO.s:373    .text.HAL_GPIO_DeInit:0000000000000000 $t
-     /tmp/ccELtumO.s:380    .text.HAL_GPIO_DeInit:0000000000000000 HAL_GPIO_DeInit
-     /tmp/ccELtumO.s:585    .text.HAL_GPIO_DeInit:00000000000000e4 $d
-     /tmp/ccELtumO.s:592    .text.HAL_GPIO_ReadPin:0000000000000000 $t
-     /tmp/ccELtumO.s:599    .text.HAL_GPIO_ReadPin:0000000000000000 HAL_GPIO_ReadPin
-     /tmp/ccELtumO.s:626    .text.HAL_GPIO_WritePin:0000000000000000 $t
-     /tmp/ccELtumO.s:633    .text.HAL_GPIO_WritePin:0000000000000000 HAL_GPIO_WritePin
-     /tmp/ccELtumO.s:657    .text.HAL_GPIO_TogglePin:0000000000000000 $t
-     /tmp/ccELtumO.s:664    .text.HAL_GPIO_TogglePin:0000000000000000 HAL_GPIO_TogglePin
-     /tmp/ccELtumO.s:682    .text.HAL_GPIO_LockPin:0000000000000000 $t
-     /tmp/ccELtumO.s:689    .text.HAL_GPIO_LockPin:0000000000000000 HAL_GPIO_LockPin
-     /tmp/ccELtumO.s:745    .text.HAL_GPIO_EXTI_Callback:0000000000000000 $t
-     /tmp/ccELtumO.s:752    .text.HAL_GPIO_EXTI_Callback:0000000000000000 HAL_GPIO_EXTI_Callback
-     /tmp/ccELtumO.s:765    .text.HAL_GPIO_EXTI_IRQHandler:0000000000000000 $t
-     /tmp/ccELtumO.s:772    .text.HAL_GPIO_EXTI_IRQHandler:0000000000000000 HAL_GPIO_EXTI_IRQHandler
-     /tmp/ccELtumO.s:806    .text.HAL_GPIO_EXTI_IRQHandler:0000000000000018 $d
+     /tmp/ccoDLUnf.s:16     .text.HAL_GPIO_Init:0000000000000000 $t
+     /tmp/ccoDLUnf.s:23     .text.HAL_GPIO_Init:0000000000000000 HAL_GPIO_Init
+     /tmp/ccoDLUnf.s:363    .text.HAL_GPIO_Init:00000000000001d4 $d
+     /tmp/ccoDLUnf.s:373    .text.HAL_GPIO_DeInit:0000000000000000 $t
+     /tmp/ccoDLUnf.s:380    .text.HAL_GPIO_DeInit:0000000000000000 HAL_GPIO_DeInit
+     /tmp/ccoDLUnf.s:585    .text.HAL_GPIO_DeInit:00000000000000e4 $d
+     /tmp/ccoDLUnf.s:592    .text.HAL_GPIO_ReadPin:0000000000000000 $t
+     /tmp/ccoDLUnf.s:599    .text.HAL_GPIO_ReadPin:0000000000000000 HAL_GPIO_ReadPin
+     /tmp/ccoDLUnf.s:626    .text.HAL_GPIO_WritePin:0000000000000000 $t
+     /tmp/ccoDLUnf.s:633    .text.HAL_GPIO_WritePin:0000000000000000 HAL_GPIO_WritePin
+     /tmp/ccoDLUnf.s:657    .text.HAL_GPIO_TogglePin:0000000000000000 $t
+     /tmp/ccoDLUnf.s:664    .text.HAL_GPIO_TogglePin:0000000000000000 HAL_GPIO_TogglePin
+     /tmp/ccoDLUnf.s:682    .text.HAL_GPIO_LockPin:0000000000000000 $t
+     /tmp/ccoDLUnf.s:689    .text.HAL_GPIO_LockPin:0000000000000000 HAL_GPIO_LockPin
+     /tmp/ccoDLUnf.s:745    .text.HAL_GPIO_EXTI_Callback:0000000000000000 $t
+     /tmp/ccoDLUnf.s:752    .text.HAL_GPIO_EXTI_Callback:0000000000000000 HAL_GPIO_EXTI_Callback
+     /tmp/ccoDLUnf.s:765    .text.HAL_GPIO_EXTI_IRQHandler:0000000000000000 $t
+     /tmp/ccoDLUnf.s:772    .text.HAL_GPIO_EXTI_IRQHandler:0000000000000000 HAL_GPIO_EXTI_IRQHandler
+     /tmp/ccoDLUnf.s:806    .text.HAL_GPIO_EXTI_IRQHandler:0000000000000018 $d
                      .debug_frame:0000000000000010 $d
 
 NO UNDEFINED SYMBOLS

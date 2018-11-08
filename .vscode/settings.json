@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "uavcan.h": "c",
+        "stm32f1xx_hal.h": "c",
+        "canard_stm32.h": "c",
+        "cmsis_os.h": "c"
+    }
+}

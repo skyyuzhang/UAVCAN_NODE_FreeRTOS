@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc9txIn9.s 			page 1
+ARM GAS  /tmp/cc9uB6hl.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc9txIn9.s 			page 1
   31:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c ****   * are permitted provided that the following conditions are met:
   32:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c ****   *   1. Redistributions of source code must retain the above copyright notice,
   33:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c ****   *      this list of conditions and the following disclaimer.
-ARM GAS  /tmp/cc9txIn9.s 			page 2
+ARM GAS  /tmp/cc9uB6hl.s 			page 2
 
 
   34:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c ****   *   2. Redistributions in binary form must reproduce the above copyright notice,
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc9txIn9.s 			page 1
   88:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c **** 
   89:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c **** /**
   90:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c ****   * @brief  Configures the port and pin on which the EVENTOUT Cortex signal will be connected.
-ARM GAS  /tmp/cc9txIn9.s 			page 3
+ARM GAS  /tmp/cc9uB6hl.s 			page 3
 
 
   91:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c ****   * @param  GPIO_PortSource Select the port used to output the Cortex EVENTOUT signal.
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc9txIn9.s 			page 1
   60              		@ args = 0, pretend = 0, frame = 0
   61              		@ frame_needed = 0, uses_anonymous_args = 0
   62              		@ link register save eliminated.
-ARM GAS  /tmp/cc9txIn9.s 			page 4
+ARM GAS  /tmp/cc9uB6hl.s 			page 4
 
 
  113:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c ****   SET_BIT(AFIO->EVCR, AFIO_EVCR_EVOE);
@@ -238,25 +238,25 @@ ARM GAS  /tmp/cc9txIn9.s 			page 1
  110              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
  111              		.file 7 "/usr/bin/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/sys/lock.h"
  112              		.file 8 "/usr/bin/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/sys/_types.h"
-ARM GAS  /tmp/cc9txIn9.s 			page 5
+ARM GAS  /tmp/cc9uB6hl.s 			page 5
 
 
  113              		.file 9 "/usr/bin/gcc-arm-none-eabi-6-2017-q2-update/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h"
  114              		.file 10 "/usr/bin/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/sys/reent.h"
-ARM GAS  /tmp/cc9txIn9.s 			page 6
+ARM GAS  /tmp/cc9uB6hl.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f1xx_hal_gpio_ex.c
-     /tmp/cc9txIn9.s:16     .text.HAL_GPIOEx_ConfigEventout:0000000000000000 $t
-     /tmp/cc9txIn9.s:23     .text.HAL_GPIOEx_ConfigEventout:0000000000000000 HAL_GPIOEx_ConfigEventout
-     /tmp/cc9txIn9.s:44     .text.HAL_GPIOEx_ConfigEventout:0000000000000010 $d
-     /tmp/cc9txIn9.s:49     .text.HAL_GPIOEx_EnableEventout:0000000000000000 $t
-     /tmp/cc9txIn9.s:56     .text.HAL_GPIOEx_EnableEventout:0000000000000000 HAL_GPIOEx_EnableEventout
-     /tmp/cc9txIn9.s:72     .text.HAL_GPIOEx_EnableEventout:000000000000000c $d
-     /tmp/cc9txIn9.s:77     .text.HAL_GPIOEx_DisableEventout:0000000000000000 $t
-     /tmp/cc9txIn9.s:84     .text.HAL_GPIOEx_DisableEventout:0000000000000000 HAL_GPIOEx_DisableEventout
-     /tmp/cc9txIn9.s:100    .text.HAL_GPIOEx_DisableEventout:000000000000000c $d
+     /tmp/cc9uB6hl.s:16     .text.HAL_GPIOEx_ConfigEventout:0000000000000000 $t
+     /tmp/cc9uB6hl.s:23     .text.HAL_GPIOEx_ConfigEventout:0000000000000000 HAL_GPIOEx_ConfigEventout
+     /tmp/cc9uB6hl.s:44     .text.HAL_GPIOEx_ConfigEventout:0000000000000010 $d
+     /tmp/cc9uB6hl.s:49     .text.HAL_GPIOEx_EnableEventout:0000000000000000 $t
+     /tmp/cc9uB6hl.s:56     .text.HAL_GPIOEx_EnableEventout:0000000000000000 HAL_GPIOEx_EnableEventout
+     /tmp/cc9uB6hl.s:72     .text.HAL_GPIOEx_EnableEventout:000000000000000c $d
+     /tmp/cc9uB6hl.s:77     .text.HAL_GPIOEx_DisableEventout:0000000000000000 $t
+     /tmp/cc9uB6hl.s:84     .text.HAL_GPIOEx_DisableEventout:0000000000000000 HAL_GPIOEx_DisableEventout
+     /tmp/cc9uB6hl.s:100    .text.HAL_GPIOEx_DisableEventout:000000000000000c $d
                      .debug_frame:0000000000000010 $d
 
 NO UNDEFINED SYMBOLS

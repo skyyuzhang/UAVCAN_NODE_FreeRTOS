@@ -50,6 +50,11 @@
 #include "main.h"
 #include "stm32f1xx_hal.h"
 #include "cmsis_os.h"
+#include "canard.h"
+#include "canard_stm32.h"
+#include "uavcan.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /* USER CODE BEGIN Includes */
 
@@ -82,7 +87,7 @@ void StartTask02(void const * argument);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
-uint8_t number;
+
 /* USER CODE END 0 */
 
 /**
@@ -116,6 +121,8 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   MX_CAN_Init();
+  uavcanInit();
+
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -134,7 +141,7 @@ int main(void)
 
   /* Create the thread(s) */
   /* definition and creation of Task01 */
-  osThreadDef(Task01, StartTask01, osPriorityNormal, 0, 128);
+  osThreadDef(Task01, StartTask01, osPriorityNormal, 0, 256);
   Task01Handle = osThreadCreate(osThread(Task01), NULL);
 
   /* definition and creation of Task02 */
@@ -148,8 +155,7 @@ int main(void)
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
   /* USER CODE END RTOS_QUEUES */
- 
-
+   
   /* Start scheduler */
   osKernelStart();
   
@@ -161,7 +167,7 @@ int main(void)
   {
 
   /* USER CODE END WHILE */
-
+  
   /* USER CODE BEGIN 3 */
 
   }
@@ -308,8 +314,9 @@ void StartTask01(void const * argument)
   /* Infinite loop */
   while(1)
   {
-    number++;
-    osDelay(100);
+    sendCanard();
+    receiveCanard();
+    spinCanard();
   }
   /* USER CODE END 5 */ 
 }
@@ -325,32 +332,12 @@ void StartTask02(void const * argument)
 {
   /* USER CODE BEGIN StartTask02 */
   /* Infinite loop */
-  for(;;)
+  while(1)
   {
-    osDelay(1);
+      
+     
   }
   /* USER CODE END StartTask02 */
-}
-
-/**
-  * @brief  Period elapsed callback in non blocking mode
-  * @note   This function is called  when TIM4 interrupt took place, inside
-  * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
-  * a global variable "uwTick" used as application time base.
-  * @param  htim : TIM handle
-  * @retval None
-  */
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
-{
-  /* USER CODE BEGIN Callback 0 */
-
-  /* USER CODE END Callback 0 */
-  if (htim->Instance == TIM4) {
-    HAL_IncTick();
-  }
-  /* USER CODE BEGIN Callback 1 */
-
-  /* USER CODE END Callback 1 */
 }
 
 /**
