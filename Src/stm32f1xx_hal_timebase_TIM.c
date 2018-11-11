@@ -1,8 +1,7 @@
-/* USER CODE BEGIN Header */
 /**
   ******************************************************************************
-  * File Name          : freertos.c
-  * Description        : Code for freertos applications
+  * @file    stm32f1xx_hal_timebase_TIM.c 
+  * @brief   HAL time base based on the hardware TIM.
   ******************************************************************************
   * This notice applies to any and all portions of this file
   * that are not between comment pairs USER CODE BEGIN and
@@ -46,135 +45,114 @@
   *
   ******************************************************************************
   */
-/* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
-#include "FreeRTOS.h"
-#include "task.h"
-#include "main.h"
-#include "cmsis_os.h"
 #include "stm32f1xx_hal.h"
+#include "stm32f1xx_hal_tim.h"
+/** @addtogroup STM32F7xx_HAL_Examples
+  * @{
+  */
 
-/* Private includes ----------------------------------------------------------*/
-/* USER CODE BEGIN Includes */     
-
-/* USER CODE END Includes */
+/** @addtogroup HAL_TimeBase
+  * @{
+  */ 
 
 /* Private typedef -----------------------------------------------------------*/
-/* USER CODE BEGIN PTD */
-
-/* USER CODE END PTD */
-
 /* Private define ------------------------------------------------------------*/
-/* USER CODE BEGIN PD */
-
-/* USER CODE END PD */
-
 /* Private macro -------------------------------------------------------------*/
-/* USER CODE BEGIN PM */
-extern UART_HandleTypeDef huart1;
-/* USER CODE END PM */
-
 /* Private variables ---------------------------------------------------------*/
-/* USER CODE BEGIN Variables */
-
-/* USER CODE END Variables */
-osThreadId Task01Handle;
-osThreadId Task02Handle;
-
+TIM_HandleTypeDef        htim4; 
+uint32_t                 uwIncrementState = 0;
 /* Private function prototypes -----------------------------------------------*/
-/* USER CODE BEGIN FunctionPrototypes */
-   
-/* USER CODE END FunctionPrototypes */
-
-void StartTask01(void const * argument);
-void StartTask02(void const * argument);
-
-void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
+/* Private functions ---------------------------------------------------------*/
 
 /**
-  * @brief  FreeRTOS initialization
+  * @brief  This function configures the TIM4 as a time base source. 
+  *         The time source is configured  to have 1ms time base with a dedicated 
+  *         Tick interrupt priority. 
+  * @note   This function is called  automatically at the beginning of program after
+  *         reset by HAL_Init() or at any time when clock is configured, by HAL_RCC_ClockConfig(). 
+  * @param  TickPriority: Tick interrupt priorty.
+  * @retval HAL status
+  */
+HAL_StatusTypeDef HAL_InitTick(uint32_t TickPriority)
+{
+  RCC_ClkInitTypeDef    clkconfig;
+  uint32_t              uwTimclock = 0;
+  uint32_t              uwPrescalerValue = 0;
+  uint32_t              pFLatency;
+  
+  /*Configure the TIM4 IRQ priority */
+  HAL_NVIC_SetPriority(TIM4_IRQn, TickPriority ,0); 
+  
+  /* Enable the TIM4 global Interrupt */
+  HAL_NVIC_EnableIRQ(TIM4_IRQn); 
+  
+  /* Enable TIM4 clock */
+  __HAL_RCC_TIM4_CLK_ENABLE();
+  
+  /* Get clock configuration */
+  HAL_RCC_GetClockConfig(&clkconfig, &pFLatency);
+  
+  /* Compute TIM4 clock */
+  uwTimclock = 2*HAL_RCC_GetPCLK1Freq();
+   
+  /* Compute the prescaler value to have TIM4 counter clock equal to 1MHz */
+  uwPrescalerValue = (uint32_t) ((uwTimclock / 1000000) - 1);
+  
+  /* Initialize TIM4 */
+  htim4.Instance = TIM4;
+  
+  /* Initialize TIMx peripheral as follow:
+  + Period = [(TIM4CLK/1000) - 1]. to have a (1/1000) s time base.
+  + Prescaler = (uwTimclock/1000000 - 1) to have a 1MHz counter clock.
+  + ClockDivision = 0
+  + Counter direction = Up
+  */
+  htim4.Init.Period = (1000000 / 1000) - 1;
+  htim4.Init.Prescaler = uwPrescalerValue;
+  htim4.Init.ClockDivision = 0;
+  htim4.Init.CounterMode = TIM_COUNTERMODE_UP;
+  if(HAL_TIM_Base_Init(&htim4) == HAL_OK)
+  {
+    /* Start the TIM time Base generation in interrupt mode */
+    return HAL_TIM_Base_Start_IT(&htim4);
+  }
+  
+  /* Return function status */
+  return HAL_ERROR;
+}
+
+/**
+  * @brief  Suspend Tick increment.
+  * @note   Disable the tick increment by disabling TIM4 update interrupt.
   * @param  None
   * @retval None
   */
-void MX_FREERTOS_Init(void) {
-  /* USER CODE BEGIN Init */
-       
-  /* USER CODE END Init */
-
-  /* USER CODE BEGIN RTOS_MUTEX */
-  /* add mutexes, ... */
-  /* USER CODE END RTOS_MUTEX */
-
-  /* USER CODE BEGIN RTOS_SEMAPHORES */
-  /* add semaphores, ... */
-  /* USER CODE END RTOS_SEMAPHORES */
-
-  /* USER CODE BEGIN RTOS_TIMERS */
-  /* start timers, add new ones, ... */
-  /* USER CODE END RTOS_TIMERS */
-
-  /* Create the thread(s) */
-  /* definition and creation of Task01 */
-  osThreadDef(Task01, StartTask01, osPriorityNormal, 0, 128);
-  Task01Handle = osThreadCreate(osThread(Task01), NULL);
-
-  /* definition and creation of Task02 */
-  osThreadDef(Task02, StartTask02, osPriorityNormal, 0, 256);
-  Task02Handle = osThreadCreate(osThread(Task02), NULL);
-
-  /* USER CODE BEGIN RTOS_THREADS */
-  /* add threads, ... */
-  /* USER CODE END RTOS_THREADS */
-
-  /* USER CODE BEGIN RTOS_QUEUES */
-  /* add queues, ... */
-  /* USER CODE END RTOS_QUEUES */
+void HAL_SuspendTick(void)
+{
+  /* Disable TIM4 update Interrupt */
+  __HAL_TIM_DISABLE_IT(&htim4, TIM_IT_UPDATE);                                                  
 }
 
-/* USER CODE BEGIN Header_StartTask01 */
 /**
-  * @brief  Function implementing the Task01 thread.
-  * @param  argument: Not used 
+  * @brief  Resume Tick increment.
+  * @note   Enable the tick increment by Enabling TIM4 update interrupt.
+  * @param  None
   * @retval None
   */
-/* USER CODE END Header_StartTask01 */
-void StartTask01(void const * argument)
+void HAL_ResumeTick(void)
 {
-
-  /* USER CODE BEGIN StartTask01 */
-  /* Infinite loop */
-  while(1)
-  {
-    //HAL_GPIO_TogglePin(GPIOB,GPIO_PIN_12);
-   // HAL_UART_Transmit(&huart1,"go",2,0xffff);
-    showRcpwmonUart();
-    osDelay(100);
-  }
-  /* USER CODE END StartTask01 */
+  /* Enable TIM4 Update interrupt */
+  __HAL_TIM_ENABLE_IT(&htim4, TIM_IT_UPDATE);
 }
 
-/* USER CODE BEGIN Header_StartTask02 */
 /**
-* @brief Function implementing the Task02 thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_StartTask02 */
-void StartTask02(void const * argument)
-{
-  while(1)
-  {
-    sendCanard();
-    receiveCanard();
-    spinCanard();
-    publishCanard();
-  }
-}
+  * @}
+  */ 
 
-/* Private application code --------------------------------------------------*/
-/* USER CODE BEGIN Application */
-     
-/* USER CODE END Application */
+/**
+  * @}
+  */ 
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

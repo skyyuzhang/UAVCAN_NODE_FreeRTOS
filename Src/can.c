@@ -1,8 +1,8 @@
 /**
   ******************************************************************************
-  * @file           : main.h
-  * @brief          : Header for main.c file.
-  *                   This file contains the common defines of the application.
+  * File Name          : CAN.c
+  * Description        : This file provides code for the configuration
+  *                      of the CAN instances.
   ******************************************************************************
   * This notice applies to any and all portions of this file
   * that are not between comment pairs USER CODE BEGIN and
@@ -47,38 +47,105 @@
   ******************************************************************************
   */
 
-/* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __MAIN_H__
-#define __MAIN_H__
-
 /* Includes ------------------------------------------------------------------*/
-/* USER CODE BEGIN Includes */
+#include "can.h"
 
-/* USER CODE END Includes */
+#include "gpio.h"
 
-/* Private define ------------------------------------------------------------*/
+/* USER CODE BEGIN 0 */
 
-/* ########################## Assert Selection ############################## */
-/**
-  * @brief Uncomment the line below to expanse the "assert_param" macro in the 
-  *        HAL drivers code
-  */
-/* #define USE_FULL_ASSERT    1U */
+/* USER CODE END 0 */
 
-/* USER CODE BEGIN Private defines */
+CAN_HandleTypeDef hcan;
 
-/* USER CODE END Private defines */
+/* CAN init function */
+void MX_CAN_Init(void)
+{
 
-#ifdef __cplusplus
- extern "C" {
-#endif
-void _Error_Handler(char *, int);
+  hcan.Instance = CAN1;
+  hcan.Init.Prescaler = 16;
+  hcan.Init.Mode = CAN_MODE_NORMAL;
+  hcan.Init.SJW = CAN_SJW_1TQ;
+  hcan.Init.BS1 = CAN_BS1_1TQ;
+  hcan.Init.BS2 = CAN_BS2_1TQ;
+  hcan.Init.TTCM = DISABLE;
+  hcan.Init.ABOM = DISABLE;
+  hcan.Init.AWUM = DISABLE;
+  hcan.Init.NART = DISABLE;
+  hcan.Init.RFLM = DISABLE;
+  hcan.Init.TXFP = DISABLE;
+  if (HAL_CAN_Init(&hcan) != HAL_OK)
+  {
+    _Error_Handler(__FILE__, __LINE__);
+  }
 
-#define Error_Handler() _Error_Handler(__FILE__, __LINE__)
-#ifdef __cplusplus
 }
-#endif
 
-#endif /* __MAIN_H__ */
+void HAL_CAN_MspInit(CAN_HandleTypeDef* canHandle)
+{
+
+  GPIO_InitTypeDef GPIO_InitStruct;
+  if(canHandle->Instance==CAN1)
+  {
+  /* USER CODE BEGIN CAN1_MspInit 0 */
+
+  /* USER CODE END CAN1_MspInit 0 */
+    /* CAN1 clock enable */
+    __HAL_RCC_CAN1_CLK_ENABLE();
+  
+    /**CAN GPIO Configuration    
+    PA11     ------> CAN_RX
+    PA12     ------> CAN_TX 
+    */
+    GPIO_InitStruct.Pin = GPIO_PIN_11;
+    GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+    GPIO_InitStruct.Pin = GPIO_PIN_12;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /* USER CODE BEGIN CAN1_MspInit 1 */
+
+  /* USER CODE END CAN1_MspInit 1 */
+  }
+}
+
+void HAL_CAN_MspDeInit(CAN_HandleTypeDef* canHandle)
+{
+
+  if(canHandle->Instance==CAN1)
+  {
+  /* USER CODE BEGIN CAN1_MspDeInit 0 */
+
+  /* USER CODE END CAN1_MspDeInit 0 */
+    /* Peripheral clock disable */
+    __HAL_RCC_CAN1_CLK_DISABLE();
+  
+    /**CAN GPIO Configuration    
+    PA11     ------> CAN_RX
+    PA12     ------> CAN_TX 
+    */
+    HAL_GPIO_DeInit(GPIOA, GPIO_PIN_11|GPIO_PIN_12);
+
+  /* USER CODE BEGIN CAN1_MspDeInit 1 */
+
+  /* USER CODE END CAN1_MspDeInit 1 */
+  }
+} 
+
+/* USER CODE BEGIN 1 */
+
+/* USER CODE END 1 */
+
+/**
+  * @}
+  */
+
+/**
+  * @}
+  */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

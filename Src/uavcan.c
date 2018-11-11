@@ -1,7 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "canard.h"
 #include "canard_stm32.h"
 #include "uavcan.h"
 #include "stm32f1xx_hal.h"
+#include "main.h"
 
 #define CANARD_SPIN_PERIOD   500
 #define PUBLISHER_PERIOD_mS     25
@@ -9,18 +12,11 @@
 static CanardInstance g_canard;                //The library instance
 static uint8_t g_canard_memory_pool[1024];     //Arena for memory allocation, used by the library
 static uint32_t  g_uptime = 0;
+uint16_t rc_pwm[6] = {0,0,0,0,0,0};
 
 
 
- void sendCanard(void);
- void receiveCanard(void);
- void spinCanard(void);
- void publishCanard(void);
- void rawcmdHandleCanard(CanardRxTransfer* transfer);
- void getsetHandleCanard(CanardRxTransfer* transfer);
- void getNodeInfoHandleCanard(CanardRxTransfer* transfer);
- //uint16_t encodeParamCanard(param_t * p, uint8_t * buffer);
- uint16_t makeNodeInfoMessage(uint8_t buffer[UAVCAN_GET_NODE_INFO_RESPONSE_MAX_SIZE]);
+ 
 
 //////////////////////////////////////////////////////////////////////////////////////
 
@@ -35,6 +31,11 @@ bool shouldAcceptTransfer(const CanardInstance* ins,
         *out_data_type_signature = UAVCAN_GET_NODE_INFO_DATA_TYPE_SIGNATURE;
         return true;
     }
+    if (data_type_id == UAVCAN_EQUIPMENT_ESC_RAWCOMMAND_ID)
+    {
+        *out_data_type_signature = UAVCAN_EQUIPMENT_ESC_RAWCOMMAND_SIGNATURE;
+        return true;
+    }
     return false;
 }
 
@@ -47,6 +48,11 @@ void onTransferReceived(CanardInstance* ins, CanardRxTransfer* transfer)
     {
         getNodeInfoHandleCanard(transfer);
     } 
+
+    if (transfer->data_type_id == UAVCAN_EQUIPMENT_ESC_RAWCOMMAND_ID)
+    {
+        rawcmdHandleCanard(transfer);
+    }
     
 }
 
@@ -141,6 +147,48 @@ void spinCanard(void)
     
 }
 
+
+
+void publishCanard(void)
+{  
+    static uint32_t publish_time = 0;
+    static int step = 0;
+    if(HAL_GetTick() < publish_time + PUBLISHER_PERIOD_mS) {return;} // rate limiting
+    publish_time = HAL_GetTick();
+  
+    uint8_t buffer[UAVCAN_PROTOCOL_DEBUG_KEYVALUE_MESSAGE_SIZE];
+    memset(buffer,0x00,UAVCAN_PROTOCOL_DEBUG_KEYVALUE_MESSAGE_SIZE);
+    step++;
+    if(step == 256) 
+    {
+        step = 0;
+    }
+  
+    float val = sine_wave[step];
+    static uint8_t transfer_id = 0;
+    canardEncodeScalar(buffer, 0, 32, &val);
+    memcpy(&buffer[4], "sin", 3);    
+    canardBroadcast(&g_canard, 
+                    UAVCAN_PROTOCOL_DEBUG_KEYVALUE_SIGNATURE,
+                    UAVCAN_PROTOCOL_DEBUG_KEYVALUE_ID,
+                    &transfer_id,
+                    CANARD_TRANSFER_PRIORITY_LOW,
+                    &buffer[0], 
+                    7);
+    memset(buffer,0x00,UAVCAN_PROTOCOL_DEBUG_KEYVALUE_MESSAGE_SIZE);
+  
+    val = step;
+    canardEncodeScalar(buffer, 0, 32, &val);
+    memcpy(&buffer[4], "stp", 3);  
+    canardBroadcast(&g_canard, 
+                    UAVCAN_PROTOCOL_DEBUG_KEYVALUE_SIGNATURE,
+                    UAVCAN_PROTOCOL_DEBUG_KEYVALUE_ID,
+                    &transfer_id,
+                    CANARD_TRANSFER_PRIORITY_LOW,
+                    &buffer[0], 
+                    7);
+}
+
 void makeNodeStatusMessage(uint8_t buffer[UAVCAN_NODE_STATUS_MESSAGE_SIZE])
 {
     uint8_t node_health = UAVCAN_NODE_HEALTH_OK;
@@ -175,4 +223,24 @@ void readUniqueID(uint8_t* out_uid)
     {
         out_uid[i] = i;
     }
+}
+
+
+void rawcmdHandleCanard(CanardRxTransfer* transfer)
+{
+    
+    int offset = 0;
+    for (int i = 0; i<6; i++)
+    {
+        if (canardDecodeScalar(transfer, offset, 14, true, &rc_pwm[i])<14) { break; }
+        offset += 14;
+    }
+   // rcpwmUpdate(ar);
+}
+void showRcpwmonUart()
+{
+    char str[5];
+    itoa(rc_pwm[0],str,10);
+    HAL_UART_Transmit(&huart1,str,5,0xffff);
+    HAL_UART_Transmit(&huart1,"\n",2,0xffff);
 }
