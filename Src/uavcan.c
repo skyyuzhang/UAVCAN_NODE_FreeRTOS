@@ -36,6 +36,11 @@ bool shouldAcceptTransfer(const CanardInstance* ins,
         *out_data_type_signature = UAVCAN_EQUIPMENT_ESC_RAWCOMMAND_SIGNATURE;
         return true;
     }
+    if (data_type_id == UAVCAN_PROTOCOL_PARAM_GETSET_ID)
+    {
+        *out_data_type_signature = UAVCAN_PROTOCOL_PARAM_GETSET_SIGNATURE;
+        return true;
+    }
     return false;
 }
 
@@ -43,8 +48,7 @@ bool shouldAcceptTransfer(const CanardInstance* ins,
 
 void onTransferReceived(CanardInstance* ins, CanardRxTransfer* transfer)
 {
-    if ((transfer->transfer_type == CanardTransferTypeRequest) &&
-        (transfer->data_type_id == UAVCAN_GET_NODE_INFO_DATA_TYPE_ID))
+    if ((transfer->transfer_type == CanardTransferTypeRequest) && (transfer->data_type_id == UAVCAN_GET_NODE_INFO_DATA_TYPE_ID))
     {
         getNodeInfoHandleCanard(transfer);
     } 
@@ -52,6 +56,11 @@ void onTransferReceived(CanardInstance* ins, CanardRxTransfer* transfer)
     if (transfer->data_type_id == UAVCAN_EQUIPMENT_ESC_RAWCOMMAND_ID)
     {
         rawcmdHandleCanard(transfer);
+    }
+
+    if (transfer->data_type_id == UAVCAN_PROTOCOL_PARAM_GETSET_ID)
+    {
+        getsetHandleCanard(transfer);
     }
     
 }
@@ -127,6 +136,7 @@ void receiveCanard(void)
         canardHandleRxFrame(&g_canard, &rx_frame, HAL_GetTick() * 1000);
     }    
 }
+
 void spinCanard(void)
 {  
     static uint32_t spin_time = 0;
@@ -146,8 +156,6 @@ void spinCanard(void)
                     UAVCAN_NODE_STATUS_MESSAGE_SIZE);                         //some indication
     
 }
-
-
 
 void publishCanard(void)
 {  
@@ -237,10 +245,158 @@ void rawcmdHandleCanard(CanardRxTransfer* transfer)
     }
    // rcpwmUpdate(ar);
 }
+
 void showRcpwmonUart()
 {
     char str[5];
     itoa(rc_pwm[0],str,10);
     HAL_UART_Transmit(&huart1,str,5,0xffff);
     HAL_UART_Transmit(&huart1,"\n",2,0xffff);
+}
+
+
+
+
+
+param_t parameters[] =
+{
+    {"param0", 0, 10,20, 15},
+    {"param1", 1, 0, 100, 25},
+    {"param2", 2, 2, 8,  3 },
+};
+
+inline param_t * getParamByIndex(uint16_t index)
+{
+  if(index >= ARRAY_SIZE(parameters)) 
+  {
+    return NULL;
+  }
+
+  return &parameters[index];
+}
+
+inline param_t * getParamByName(uint8_t * name)
+{
+  for(uint16_t i = 0; i < ARRAY_SIZE(parameters); i++)
+  {
+    if(strncmp((char const*)name, (char const*)parameters[i].name,strlen((char const*)parameters[i].name)) == 0) 
+    {
+      return &parameters[i];
+    }
+  }      
+  return NULL;
+}
+
+uint16_t encodeParamCanard(param_t * p, uint8_t * buffer)
+{
+    uint8_t n     = 0;
+    int offset    = 0;
+    uint8_t tag   = 1;
+    if(p==NULL)
+    {   
+        tag = 0;
+        canardEncodeScalar(buffer, offset, 5, &n);
+        offset += 5;
+        canardEncodeScalar(buffer, offset,3, &tag);
+        offset += 3;
+        
+        canardEncodeScalar(buffer, offset, 6, &n);
+        offset += 6;
+        canardEncodeScalar(buffer, offset,2, &tag);
+        offset += 2;
+        
+        canardEncodeScalar(buffer, offset, 6, &n);
+        offset += 6;
+        canardEncodeScalar(buffer, offset, 2, &tag);
+        offset += 2;
+        buffer[offset / 8] = 0;
+        return ( offset / 8 + 1 );
+    }
+    canardEncodeScalar(buffer, offset, 5,&n);
+    offset += 5;
+    canardEncodeScalar(buffer, offset, 3, &tag);
+    offset += 3;
+    canardEncodeScalar(buffer, offset, 64, &p->val);
+    offset += 64;
+    
+    canardEncodeScalar(buffer, offset, 5, &n);
+    offset += 5;
+    canardEncodeScalar(buffer, offset, 3, &tag);
+    offset += 3;
+    canardEncodeScalar(buffer, offset, 64, &p->defval);
+    offset += 64;
+    
+    canardEncodeScalar(buffer, offset, 6, &n);
+    offset += 6;
+    canardEncodeScalar(buffer, offset, 2, &tag);
+    offset += 2;
+    canardEncodeScalar(buffer, offset, 64, &p->max);
+    offset += 64;
+    
+    canardEncodeScalar(buffer, offset, 6, &n);
+    offset += 6;
+    canardEncodeScalar(buffer, offset,2,&tag);
+    offset += 2;
+    canardEncodeScalar(buffer, offset,64,&p->min);
+    offset += 64;
+    
+    memcpy(&buffer[offset / 8], p->name, strlen((char const*)p->name));
+    return  (offset/8 + strlen((char const*)p->name)); 
+}
+
+
+void getsetHandleCanard(CanardRxTransfer* transfer)
+{
+    uint16_t index = 0xFFFF;
+    uint8_t tag    = 0;
+    int offset     = 0;
+    int64_t val    = 0;
+
+    canardDecodeScalar(transfer, offset,  13, false, &index);
+    offset += 13;
+    canardDecodeScalar(transfer, offset, 3, false, &tag);
+    offset += 3;
+
+    if(tag == 1)
+    {
+        canardDecodeScalar(transfer, offset, 64, false, &val);
+        offset += 64;
+    } 
+
+    uint16_t n = transfer->payload_len - offset / 8 ;
+    uint8_t name[16]      = "";
+    for(int i = 0; i < n; i++)
+    {
+        canardDecodeScalar(transfer, offset, 8, false, &name[i]);
+        offset += 8;
+    }
+
+    param_t * p = NULL;
+
+    if(strlen((char const*)name))
+    {
+        p = getParamByName(name);
+    }
+    else
+    {
+        p = getParamByIndex(index);
+    }
+
+    if((p)&&(tag == 1))
+    {
+        p->val = val;
+    }
+
+    uint8_t  buffer[64] = "";
+    uint16_t len = encodeParamCanard(p, buffer);
+    int result = canardRequestOrRespond(&g_canard,
+                                        transfer->source_node_id,
+                                        UAVCAN_PROTOCOL_PARAM_GETSET_SIGNATURE,
+                                        UAVCAN_PROTOCOL_PARAM_GETSET_ID,
+                                        &transfer->transfer_id,
+                                        transfer->priority,
+                                        CanardResponse,
+                                        &buffer[0],
+                                        (uint16_t)len);
+  
 }

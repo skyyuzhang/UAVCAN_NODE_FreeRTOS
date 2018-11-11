@@ -47,6 +47,18 @@
 
 extern UART_HandleTypeDef huart1;
 
+typedef struct
+{
+uint8_t* name;
+int64_t val; 
+int64_t min;
+int64_t max;
+int64_t defval;
+} param_t;
+
+
+
+
 void showRcpwmonUart(void);
 
 void sendCanard(void);
